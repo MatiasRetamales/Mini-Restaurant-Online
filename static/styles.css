@@ -1,0 +1,271 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente general */
+    margin: 0;
+    padding: 0;
+    background-color: #b14513; /* Color de fondo claro */
+
+}
+
+.contenedor-header {
+    background-image: url(/static/img/Header_Perro_comilon.png);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    height: 150px; /* Altura del header */
+    padding: 180px; /* Padding opcional para espacio alrededor del logo */
+}
+
+
+
+
+
+.contenedor-titulo {
+    text-align: center; /* Centra el contenido del contenedor */
+    margin: 20px 0; /* Margen arriba y abajo */
+    padding: 10px; /* Padding opcional para espacio alrededor del contenido */
+}
+
+/* Estilo para el contenedor de la imagen */
+.contenedor-imagen-carrito {
+    display: flex; /* Activa el modo Flexbox */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+
+/* Estilo para la imagen */
+.imagen-carrito {
+    max-width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100px;
+}
+
+
+
+/* Contenedor de la lista de productos */
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 4 columnas adaptativas */
+    gap: 20px; /* Espacio entre productos */
+    padding: 20px; /* Espaciado interior */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+}
+
+/* Estilo para cada producto */
+.producto {
+    background-color: #fde82e; /* Fondo blanco */
+    border: 10px solid #000000; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interior */
+    text-align: center; /* Centrar el texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+.producto img {
+    width: 100%;
+    height: 200px; /* Establece una altura fija si deseas que todas las imágenes tengan la misma altura */
+    border-radius: 8px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.producto:hover {
+    background-color: #f9f9f9; /* Cambio de fondo al pasar el ratón */
+    transform: scale(1.02); /* Aumento de tamaño sutil */
+}
+
+.producto h2 {
+    margin: 0 0 10px; /* Margen inferior */
+    font-size: 1.5em; /* Tamaño de fuente para los títulos */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.producto p {
+    margin: 0 0 15px; /* Margen inferior */
+    font-size: 20px; /* Tamaño de fuente para los precios */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2a377c;
+    color: #fff; /* Color del texto del precio */
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-agregar {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interior */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.btn-agregar:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Estilo del carrito de compras */
+#carrito {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #000000; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interior */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Margen superior e inferior */
+}
+
+/* Estilo del formulario de pedido */
+#formulario-pedido {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interior */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Margen superior e inferior */
+}
+
+/* Estilo de las etiquetas y campos del formulario */
+#formulario-pedido label {
+    display: block; /* Hacer que las etiquetas ocupen toda la línea */
+    margin: 10px 0 5px; /* Margen superior e inferior */
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+#formulario-pedido input,
+#formulario-pedido textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interior */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir borde en el ancho total */
+}
+
+#formulario-pedido textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+}
+
+#formulario-pedido input[type="submit"] {
+    background-color: #28a745; /* Color de fondo del botón de envío */
+    color: #fff; /* Color del texto del botón de envío */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interior */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor en forma de mano */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+#formulario-pedido input[type="submit"]:hover {
+    background-color: #218838; /* Color de fondo al pasar el ratón */
+}
+
+#formulario-pedido input:focus,
+#formulario-pedido textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Cambia el color del borde cuando está en foco */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.titulo-formulario {
+    display: inline-block; /* Ajusta el fondo al tamaño del contenido */
+    text-align: center;
+    margin: 20px 0; /* Margen arriba y abajo */
+    padding: 10px; /* Padding opcional para espacio alrededor del texto */
+    font-size: 2em; /* Tamaño de fuente grande */
+    color: #fff; /* Color de texto claro */
+    background-color: #941313; /* Color de fondo */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border-radius: 20px;
+
+}
+
+
+.titulo-carrito {
+    display: inline-block; /* Ajusta el fondo al tamaño del contenido */
+    text-align: center;
+    margin: 20px 0; /* Margen arriba y abajo */
+    padding: 10px; /* Padding opcional para espacio alrededor del texto */
+    font-size: 2em; /* Tamaño de fuente grande */
+    color: #fff; /* Color de texto claro */
+    background-color: #941313; /* Color de fondo */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border-radius: 20px;
+    
+    
+
+}
+
+
+
+
+/* Añadir margen entre los botones de carrito */
+.btn-ajustar, .btn-eliminar {
+    margin: 0 5px; /* Ajusta el valor según sea necesario */
+}
+
+/* Opcional: estilo adicional para los botones */
+.btn-ajustar {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.btn-eliminar {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color de texto del footer */
+    padding: 10px; /* Espacio interno del footer */
+    text-align: center; /* Centra el contenido del footer */
+}
+
+/* Estilo para la sección "Síguenos" */
+.siguenos h4 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Estilo para la sección de redes sociales */
+.footer-redes-sociales {
+    margin: 20px 0; /* Espacio arriba y abajo de las redes sociales */
+}
+
+.footer-redes-sociales .social-icon {
+    display: inline-block; /* Muestra los iconos en línea */
+    margin: 0 10px; /* Espacio entre los iconos */
+}
+
+.imagenes_redes {
+    width: 30px; /* Tamaño de los iconos de redes sociales */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+/* Estilo para la sección de derechos reservados */
+.footer-derechos {
+    margin-top: 20px; /* Espacio arriba de los derechos reservados */
+}
+
+/* Opcional: agregar estilos para enlaces en el footer */
+footer a {
+    color: #fff; /* Color de texto para enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+}

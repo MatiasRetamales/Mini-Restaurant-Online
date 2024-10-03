@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Perro Comilon</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header class="contenedor-header">
+    </header>
+    
+    <!-- Sección de productos -->
+    <div class="lista-productos">
+        <div class="producto">
+            <h2>Completo</h2>
+            <img src="/static/img/completo.jpg" alt="completo">
+            <p>Precio: $1500</p>
+            <button class="btn-agregar" data-producto="Completo" data-precio="1500">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Hamburguesa</h2>
+            <img src="/static/img/hamburguesa.jpg" alt="hamburguesa">
+            <p>Precio: $2000</p>
+            <button class="btn-agregar" data-producto="Hamburguesa" data-precio="2000">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Empanada</h2>
+            <img src="/static/img/empanada.jpg" alt="empanada">
+            <p>Precio: $2000</p>
+            <button class="btn-agregar" data-producto="Empanada" data-precio="2000">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Papas Fritas</h2>
+            <img src="/static/img/papas_fritas.jpg" alt="papas fritas">
+            <p>Precio: $1800</p>
+            <button class="btn-agregar" data-producto="Papas_fritas" data-precio="1800">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Pizza</h2>
+            <img src="/static/img/pizza.jpg" alt="pizza">
+            <p>Precio: $5500</p>
+            <button class="btn-agregar" data-producto="Pizza" data-precio="5500">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Pollo frito</h2>
+            <img src="/static/img/pollo_frito.jpg" alt="pollo frito">
+            <p>Precio: $4500</p>
+            <button class="btn-agregar" data-producto="Pollo_frito" data-precio="4500">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Sandwich</h2>
+            <img src="/static/img/sandwich.jpg" alt="sandwich">
+            <p>Precio: $2500</p>
+            <button class="btn-agregar" data-producto="Sandwich" data-precio="2500">Agregar al carrito</button>
+        </div>
+
+        <div class="producto">
+            <h2>Taco</h2>
+            <img src="/static/img/tacos.jpg" alt="taco">
+            <p>Precio: $2000</p>
+            <button class="btn-agregar" data-producto="Taco" data-precio="2000">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <!-- Sección de carrito -->
+    <div class="contenedor-titulo">
+        <h2 class="titulo-carrito">Carrito de Compras</h2>
+    </div>
+     
+    <div class="contenedor-imagen-carrito">
+        <img class="imagen-carrito" src="/static/img/carrito-de-comida.png" alt="carro"/>
+    </div>
+
+    <div id="carrito">
+        <p>No hay productos en el carrito.</p>
+    </div>
+
+    <!-- Formulario para finalizar pedido -->
+    <div class="contenedor-titulo">
+        <h2 class="titulo-formulario">Formulario de Pedido</h2>
+    </div>
+    <form id="formulario-pedido" method="POST" action="/send_order">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre...">
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="Escriba su correo...">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="Escriba su telefono...">
+
+        <label for="comentarios">Comentarios adicionales</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <!-- Campo oculto para el carrito -->
+        <input type="hidden" id="carrito-data" name="carrito" value="">
+
+        <input type="submit" value="Enviar Pedido">
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <!-- siguenos -->
+        <div class="siguenos"> 
+            <h4>Síguenos en</h4>
+        </div>
+
+        <!-- Imágenes de redes sociales -->
+        <div class="footer-redes-sociales">
+            <a href="https://facebook.com/ejemplo" target="_blank" class="social-icon">
+                <img class="imagenes_redes" src="/static/img/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://twitter.com/ejemplo" target="_blank" class="social-icon">
+                <img class="imagenes_redes" src="/static/img/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://instagram.com/ejemplo" target="_blank" class="social-icon">
+                <img class="imagenes_redes" src="/static/img/instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+        <!-- Derechos reservados -->
+        <div class="footer-derechos">
+            <p>&copy; 2024 El Perro Comilon. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
